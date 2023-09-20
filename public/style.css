@@ -20,13 +20,21 @@
 
 
 .container-header {
-    /* position: fixed; */
+    top: 0;
+    padding: 10px;
+    background-color: #fff;
+    position: fixed;
     display: var(--flex-display);
     flex-direction: column;
     font-weight: 300;
+    z-index: 100;
     /* border:var(--border-color); */
 }
 
+main {
+    margin-top: 10rem;
+    overflow: scroll;
+}
 
 .container__header--child1 {
     /* border: var(--border-color); */
@@ -176,11 +184,6 @@
 /* /////////////////////////////////////////// */
 
 
-
-
-
-
-
 .container__header--child2 {
 
     display: flex;
@@ -215,28 +218,46 @@
     width: 2.5rem;
 }
 
-/* /////////////dis play grid///////////////// */
+/* /////////////display grid///////////////// */
 
-.ctr-grid {
-    margin-top: 1rem;
-    border: var(--border-color);
+.grid__container {
     padding: 10px;
-    display: grid;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 200px 200px 200px;
+
 }
+
+.grid__container__elements {
+    width: 58.5rem;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+}
+.grid__container__element-card__content{
+display: grid;
+gap: 13.6rem;
+grid-template-columns: 100px 100px 100px;
+
+}
+
+
+
+
+/* tout les elements de card */
+
 .card__content {
-    border: var(--border-color);
+
+    /* border: var(--border-color); */
     position: relative;
     height: 27rem;
-    width: 20rem;
+    width: 19rem;
     overflow: hidden;
     border-radius: 1rem;
 }
+
 .card__content__section__one-span1 {
-    display:var(--flex-display);
+    display: var(--flex-display);
     align-items: center;
     border-top-right-radius: 40vh;
     border-bottom-right-radius: 40vh;
@@ -249,6 +270,7 @@
     color: black;
     text-align: center;
 }
+
 /* ajustement de la taille de l'image */
 .card__content img {
     height: 480px;
